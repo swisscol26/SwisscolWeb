@@ -1,0 +1,6 @@
+com\mycompany\swisscolweb\JakartaRestConfiguration.class
+modelo\Producto.class
+com\mycompany\swisscolweb\resources\JakartaEE10Resource.class
+dao\ProductoDAO.class
+conexion\Conexion.class
+servlet\ProductoServlet.class
