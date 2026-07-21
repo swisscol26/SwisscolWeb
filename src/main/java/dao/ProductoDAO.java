@@ -11,6 +11,14 @@ import java.sql.SQLException;
 public class ProductoDAO {
 
     private Connection conexion;
+    
+   /**
+ * Clase encargada de gestionar las operaciones sobre la base de datos
+ * relacionadas con los productos. Implementa las operaciones CRUD
+ * (Crear, Consultar, Actualizar y Eliminar) de la aplicación SwissCol.
+ *
+ * @author Marlon Pulido
+ */
 
     public ProductoDAO() {
         conexion = Conexion.conectar();
@@ -20,8 +28,19 @@ public class ProductoDAO {
         }
     }
 
-
+    
+    
+    
     // INSERTAR PRODUCTO
+    
+    /**
+     * Inserta un nuevo producto en la base de datos utilizando la información
+     * almacenada en un objeto Producto.
+     *
+     * @param producto Objeto que contiene los datos del producto que se desea registrar.
+     * 
+     */
+    
     public void insertarProducto(Producto producto) {
 
         String sql = "INSERT INTO product(product_id, name, description, price, stock, image, category_id) VALUES(?,?,?,?,?,?,?)";
@@ -49,8 +68,16 @@ public class ProductoDAO {
         }
 
     }
+    
+   
+
 
     // LISTAR PRODUCTOS
+    
+     /**
+        * Consulta y muestra todos los productos registrados
+        * en la base de datos.
+     */
     public void listarProductos() {
 
         String sql = "SELECT * FROM product";
@@ -83,6 +110,14 @@ public class ProductoDAO {
     }
 
     // ACTUALIZAR PRODUCTO
+    
+    /**
+     * Actualiza la información de un producto existente
+     * en la base de datos.
+     *
+     * @param producto Objeto con la información actualizada del producto.
+    */
+
     public void actualizarProducto(Producto producto) {
 
         String sql = "UPDATE product SET name=?, description=?, price=?, stock=?, image=?, category_id=? WHERE product_id=?";
@@ -112,6 +147,14 @@ public class ProductoDAO {
     }
 
     // ELIMINAR PRODUCTO
+    
+    /**
+    * Elimina un producto de la base de datos utilizando
+    * su identificador.
+    *
+    * @param id Identificador del producto que será eliminado.
+     */
+
     public void eliminarProducto(int id) {
 
         String sql = "DELETE FROM product WHERE product_id=?";

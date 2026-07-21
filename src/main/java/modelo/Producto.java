@@ -1,5 +1,18 @@
 package modelo;
 
+/**
+ * Constructor que inicializa todos los atributos
+ * de un producto.
+ *
+ * @param productId Identificador del producto.
+ * @param name Nombre del producto.
+ * @param description Descripción del producto.
+ * @param price Precio del producto.
+ * @param stock Cantidad disponible.
+ * @param image Nombre o ruta de la imagen.
+ * @param categoryId Identificador de la categoría.
+ */
+
 public class Producto {
 
     private int productId;

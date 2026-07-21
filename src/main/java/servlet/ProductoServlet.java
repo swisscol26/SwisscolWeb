@@ -16,9 +16,24 @@ import modelo.Producto;
 import java.util.List;
 
 /**
+ * Proyecto: SwissColWeb
  *
- * @author J C
+ * Framework utilizado: Jakarta EE.
+ *
+ * Justificación:
+ * Se seleccionó Jakarta EE porque permite desarrollar aplicaciones web
+ * utilizando Servlets, JSP y JDBC. Además, facilita la implementación
+ * de la arquitectura MVC, la integración con la base de datos MySQL
+ * y el despliegue de la aplicación en Apache Tomcat.
+ *
+ * Este Servlet actúa como controlador de la aplicación.
+ * Recibe las solicitudes HTTP enviadas desde el formulario de registro,
+ * procesa la información del producto y la envía al ProductoDAO para
+ * realizar las operaciones sobre la base de datos.
+ *
+ * @author Marlon Pulido
  */
+
 @WebServlet("/producto")
 public class ProductoServlet extends HttpServlet {
 
